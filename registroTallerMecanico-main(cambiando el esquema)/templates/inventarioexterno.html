@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <script src="{{ url_for('static',filename='js/main.js')  }}" charset="utf-8"></script>
+  <title>Inventario del auto</title>
+  <!--<script type="text/javascript">
+    $(document).ready(function(){
+
+    /*  */
+      let primeraVez = true;
+
+      $("body").click(function () {
+        let id = localStorage.getItem('id');
+        if (primeraVez) {
+          $("#localstorage-id").val(id);
+          console.log("Se intentó poner ", id, " en input");
+          primeraVez = false;
+        }
+      });
+
+    });
+  </script>-->
+  {% endblock %}
+
+{% block body %}
+
+<nav class="navbar oswald">
+  Inventario exterior del auto
+</nav>
+
+<main class="container">
+  <div style="padding-bottom: 1rem;"></div>
+  <form action="/inventarioexterno" method="POST" class="row">
+    <input hidden type="text" name="localstorage-id" id="localstorage-id" value='{{ id }}'>
+    <!-- checkboxes:  -->
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="luces" id="luces" value="True">
+      <label class="form-check-label" for="luces">Luces encienden</label>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="antena" id="antena" value="True">
+      <label class="form-check-label" for="antena">Antena</label>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="espejos" id="espejos" value="True">
+      <label class="form-check-label" for="espejos">Espejos laterales</label>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="cristales" id="cristales" value="True">
+      <label class="form-check-label" for="cristales">Cristales en buen estado y completos</label>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="llantas" id="llantas" value="True">
+      <label class="form-check-label" for="llantas">4 llantas</label>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="tapones" id="tapones" value="True">
+      <label class="form-check-label" for="tapones">Tapones de llantas</label>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="molduras" id="molduras" value="True">
+      <label class="form-check-label" for="molduras">Molduras completas</label>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="gasolina" id="gasolina" value="True">
+      <label class="form-check-label" for="gasolina">Tapón de gasolina</label>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="parrilla" id="parrilla" value="True">
+      <label class="form-check-label" for="parrilla">Parrilla sin golpes</label>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="claxon" id="claxon" value="True">
+      <label class="form-check-label" for="claxon">Bocinas de claxon</label>
+    </div>
+    <!-- checkboxes:  -->
+    <div class="alinear-btn left">
+      <button class="btn btn-secondary sm" id="select-all-btn" type="button" name="button">Marcar todo</button>
+    </div>
+    <div class="col-12">
+      <button id="submit-btn" type="submit" class="btn-siguiente"></button>
+    </div>
+    <div class="alinear-btn">
+      <span href="inventariointerno.html" class="oswald alinear-btn">Continuar</span>
+    </div>
+  </form>
+  <div style="padding-bottom: 2rem;"></div>
+</main>
+{% endblock %}

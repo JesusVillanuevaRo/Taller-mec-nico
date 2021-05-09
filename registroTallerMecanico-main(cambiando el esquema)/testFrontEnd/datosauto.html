@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/estilo.css">
+  <title>Datos auto</title>
+</head>
+
+<body>
+  <nav class="navbar oswald">
+    Datos generales del auto
+  </nav>
+  <main style="margin: auto; width: 80%;">
+    <div style="padding:1rem;"></div>
+    <form action="/api/members" method="POST" class="row g-3">
+      <div class="col-6">
+        <label for="nombre" class="form-label">Tipo<span id="asterisco-nombre" class="asterisco-rojo"></span>
+        </label>
+        <input type="text" required name="nombre" class="form-control required" id="nombre" placeholder="Versa">
+      </div>
+      <div class="col-6">
+        <label for="link-foto" class="form-label">Marca</label>
+        <input type="text" name="marca" class="form-control" id="marca" placeholder="Nissan">
+      </div>
+      <div class="col-6">
+        <label for="rol" class="form-label">Modelo<span id="asterisco-modelo" class="asterisco-rojo"></span></label>
+        <input type="number" required name="rol" class="form-control required" id="rol" placeholder="2020">
+      </div>
+      <div class="col-6">
+        <label for="rol" class="form-label">Placas<span id="asterisco-modelo" class="asterisco-rojo"></span></label>
+        <input type="text" required name="rol" class="form-control required" id="rol" placeholder="AUX-19">
+      </div>
+      <div class="col-7">
+        <label for="rol" class="form-label">Kilometraje<span id="km" class="asterisco-rojo"></span></label>
+      <div class="input-group mb-3">
+        <input type="number" class="form-control" placeholder="100,000" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <span class="input-group-text" id="basic-addon2">km</span>
+      </div>
+      </div>
+      <div class="col-12">
+        <button id="submit-btn" type="submit" class="btn-siguiente"></button>
+      </div>
+      <div class="alinear-btn">
+        <a href="inventarioexterno.html" class="oswald alinear-btn">Continuar</a>
+      </div>
+    </form>
+</body>
+</body>
+
+</html>

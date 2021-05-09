@@ -1,0 +1,24 @@
+{% extends 'base3.html' %}
+
+{% block head %}
+<title>Registrar nuevo</title>
+{% endblock %}
+
+{% block body %}
+<main id="contenedor" class="centrado-vertical">
+  <form action="/datosauto" method="post">
+    {{ ide }}
+    <div id="antes-de-circulo" class="centrado-horizontal">
+      <a class="btn-intuitivo">
+        <input style="display: none;" type="text" name="localstorage-id" id="localstorage-id" >
+        <button class="circulo centrado-vertical icono-mas oswald" type="submit">
+          +
+        </button>
+      </a>
+    </div>
+  </form>
+  <br>
+  <h2>Registrar nuevo auto</h2>
+</main>
+
+{% endblock %}

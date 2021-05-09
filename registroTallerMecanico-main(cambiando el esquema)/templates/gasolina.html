@@ -1,0 +1,104 @@
+{% extends 'base2.html' %}
+
+{% block head %}
+<script type="text/javascript">
+  $(document).ready(function(){
+
+  /* Botón para imprimir valor del range */
+    $("#gasolina").change(function(){
+      let valor = parseFloat($(this).val());
+      switch (valor) {
+        case 0:
+          valor = "Tanque vacío"
+          break;
+        case 12.5:
+          valor = "Medio cuarto"
+          break;
+        case 25:
+          valor = "Un cuarto"
+          break;
+        case 37.5:
+          valor = "Poco más de un cuarto"
+          break;
+        case 50:
+          valor = "Medio tanque"
+          break;
+        case 62.5:
+          valor = "Poco más de medio tanque"
+          break;
+        case 75:
+          valor = "Tres cuartos de tanque"
+          break;
+        case 87.5:
+          valor = "Poco más de tres cuartos"
+          break;
+        case 100:
+          valor = "Tanque lleno"
+          break;
+        default: valor = "ERROR: ingresa de nuevo"
+      }
+      $("#valor-rango").text(valor);
+    });
+  });
+
+</script>
+<title>Gasolina y Accesorios</title>
+{% endblock %}
+
+{% block body %}
+<nav class="navbar oswald">
+  Inventario de accesorios y gasolina
+</nav>
+
+<main class="container">
+  <div style="padding:1rem;"></div>
+  <form action="/gasolina" method="POST" class="row g-3">
+    <input hidden type="text" name="localstorage-id" id="localstorage-id" value='{{ id }}'>
+    <label for="gasolina" class="form-label subtitulo">Gasolina en tanque</label>
+    <input type="range" class="form-range" min="0" max="100" step="12.5" name="gasolina" id="gasolina">
+    <span id="valor-rango">Medio tanque</span>
+    <!-- checkboxes:  -->
+    <h3 class="subtitulo">Accesorios de emergencia</h3>
+    <div class="mb-1 form-check">
+      <input type="checkbox" class="form-check-input" name="gato" id="gato" value="True">
+      <label class="form-check-label" for="gato">Gato</label>
+    </div>
+    <div class="mb-1 form-check">
+      <input type="checkbox" class="form-check-input" name="maneral" id="maneral" value="True">
+      <label class="form-check-label" for="maneral">Maneral del gato</label>
+    </div>
+    <div class="mb-1 form-check">
+      <input type="checkbox" class="form-check-input" name="llave-ruedas" id="llave-ruedas" value="True">
+      <label class="form-check-label" for="llave-ruedas">Llave de ruedas</label>
+    </div>
+    <div class="mb-1 form-check">
+      <input type="checkbox" class="form-check-input" name="estuche" id="estuche" value="True">
+      <label class="form-check-label" for="estuche">Estuche de herramientas</label>
+    </div>
+    <div class="mb-1 form-check">
+      <input type="checkbox" class="form-check-input" name="triangulos" id="triangulos" value="True">
+      <label class="form-check-label" for="triangulos">Triángulo de seguridad</label>
+    </div>
+    <div class="mb-1 form-check">
+      <input type="checkbox" class="form-check-input" name="refaccion" id="refaccion" value="True">
+      <label class="form-check-label" for="refaccion">Llanta de refacción</label>
+    </div>
+    <div class="mb-1 form-check">
+      <input type="checkbox" class="form-check-input" name="extintor" id="extintor" value="True">
+      <label class="form-check-label" for="extintor">Extintor</label>
+    </div>
+    <!-- checkboxes:  -->
+    <div style="padding-bottom: 0.5rem;"></div>
+    <div class="alinear-btn left">
+      <button class="btn btn-secondary sm" id="select-all-btn" type="button" name="button">Marcar todo</button>
+    </div>
+    <div class="col-12">
+      <button id="submit-btn" type="submit" class="btn-siguiente"></button>
+    </div>
+    <div class="alinear-btn">
+      <span href="componentes.html" class="oswald alinear-btn">Continuar</span>
+    </div>
+  </form>
+  <div style="padding-bottom: 2rem;"></div>
+</main>
+{% endblock %}

@@ -1,0 +1,15 @@
+{
+"controlHora":"20:11",
+"controlFecha":"2021/05/08",
+"id_registro":"GK202105082011x337",
+"cliente":{"nombre": "Alberto", "telefono": "5577805780", "direccion": "", "whatsApp": false},
+"datosAuto":{"tipo": "Aveo", "marca": "Chevrolet", "modelo": "2021", "placas": "132JK", "kilometraje": "54454654654654"},
+"interiorAuto":{"tablero": false, "aire": false, "plumas": false, "radio": false, "bocinas": false, "encendedor": false, "retrovisor": false, "ceniceros": false, "cinturones": false, "botones": false, "manijas": false, "tapetes": false, "vestiduras": false},
+"exteriorAuto":{"luces": false, "antena": false, "espejos": false, "cristales": false, "llantas": false, "tapones": false, "molduras": false, "gasolina": false, "parrilla": false, "claxon": false},
+"gasolinaPorCentaje":50,
+"accesorios":{"gato": false, "maneral": false, "llave-ruedas": false, "estuche": false, "triangulos": false, "refaccion": false, "extintor": false},
+"componentes":{"claxon": false, "tapon-aceite": false, "tapon-radiador": false, "varilla-aceite": false, "filtro": false, "bateria": false},
+"comentarios":"",
+"fecha":"2021/05/08",
+"hora":"20:12"
+}

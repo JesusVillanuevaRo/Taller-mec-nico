@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Historial del cliente</title>
+{% endblock %}
+
+{% block body %}
+<nav class="navbar oswald">
+  Historial del cliente
+  <a href="/busqueda/cliente">Buscar cliente</a>
+  <a href="/registrar/nuevocliente">Registrar cliente</a>
+</nav>
+<main style="margin: auto; width: 80%;">
+  <div class="oswald" style="padding:1rem;"></div>
+  {% for n in datos%}
+    <h5 class="oswal centrado-horizontal">{{n['nombre']}}</h4>
+    <h5 class="oswal centrado-horizontal"">{{n['telefono']}}</h4>
+    <h5 class="oswal centrado-horizontal"">{{n['direccion']}}</h5>
+    
+    <br>
+  </table>
+        <br><br>
+  {% endfor %}
+  {% for n in mostrador %}
+     <br>
+            <h6 class="col-4">Auto: {{n['datosauto']['tipo']}}</h6>
+            <h6 class="col-6">Marca: {{n['datosauto']['marca']}}</h6>
+            <h6 class="col-8">Placas: {{n['datosauto']['placas']}}</h6>
+            <h6 class="col-10">Fecha: {{n['fecha']}} Hora:{{n['hora']}}</h6>
+    <br><br>
+    
+  {% endfor %}
+  <div>
+    <div class="col-2">
+      <button id="atras-btn" onclick="history.back()" class="btn-siguiente"></button>
+    </div>
+  </div>
+  <div>
+      <span class="oswald col-1">Regresar</span>
+  </div>
+  <!--<script src="{{ url_for('static', filename='js/setlocalstorage.js') }}" charset="utf-8"></script>-->
+{% endblock %} 

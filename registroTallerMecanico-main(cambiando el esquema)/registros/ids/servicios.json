@@ -1,0 +1,115 @@
+{
+    "cliente": "Este dato debe ser el mismo que el _id del cliente, el cuál genera MongoDB" required,
+    "fecha_ingreso": "Date (AA-MM-DD)" required,
+    "fecha_entrega": "String (AA-MM-DD)" required,
+    "datos_auto" :
+    {
+        "modelo": "String (máx 30 char)" required, 
+        "tipo": "String (máx 50 char)" required,
+        "marca": "String (máx 15 char)" required,
+        "color:": "String (máx 20 char)" required,
+        "placas": "String (indefinido)" required,
+        "no_serire": "String (indefinido)" required,
+        "no_motor": "String (indefinido)" required,
+        "km_recorridos": "Number (1-6 digits)" required,
+        "tanque_gasolina": "Number (0-100)" required,
+        "inventario_exteriores":
+        {
+            "unidad_de_luces": "Boolean" required,
+            "sin_luces": "Boolean" required,
+            "antena": "Boolean" required,
+            "espejo_lateral": "Boolean" required,
+            "cristales": "Boolean" required,
+            "emblema": "Boolean" required,
+            "llantas_4": "Boolean" required,
+            "tpon_ruedas_4": "Boolean" required,
+            "molduras_completas": "Boolean" required,
+            "tapon_gasolina": "Boolean" required,
+            "parrilla_singolpes": "Boolean" required,
+            "bocinas_claxon": "Boolean" required
+        },
+        "inventario_interiores":   
+        {
+            "aditamentos_tablero": "Boolean" required,
+            "calefaccion": "Boolean" required,
+            "limpiadores_plumas": "Boolean" required,
+            "radio_tipo": "Boolean" required,
+            "bocinas": "Boolean" required,
+            "encendedor": "Boolean" required,
+            "espejo_retrovisor": "Boolean" required,
+            "ceniceros": "Boolean" required,
+            "cinturones": "Boolean" required,
+            "botones_interiores": "Boolean" required,
+            "manijas_interiores": "Boolean" required,
+            "tapetes": "Boolean" required,
+            "vestiduras": "Boolean" required
+        },
+        "inventario_accesorios":
+        {
+            "gato": "Boolean" required,
+            "maneral_del_gato": "Boolean" required,
+            "llave_de_ruedas": "Boolean" required,
+            "estuche_herramientas": "Boolean" required,
+            "triangulos_de_seguridad": "Boolean" required,
+            "llanata_refacción": "Boolean" required,
+            "extinguidor": "Boolean" required
+        },
+        "inventario_componentes_mecanicos":
+        {
+            "claxon": "Boolean" required,
+            "tapon_aceite": "Boolean" required,
+            "tapon_radiador": "Boolean" required,
+            "varilla_aceite": "Boolean" required,
+            "filtro_aceite": "Boolean" required,
+            "bateria_mca": "Boolean" required
+        }
+    },
+    "datos_servicio":
+    {
+        "detalles_a_considerar":
+        {
+            "observaciones": "String (máx 200 char)",
+            "trabajo_solicitado": "String (máx 200 caracteres)",
+            "diagnostico": "String (máx 200 caracteres)",
+            "posibles_consecuencias": "String (máx 200 caracteres)"
+        },
+        "presupuesto_operacion1":
+        {
+            "claveop": "String (máx 10 char)" required,
+            "numero_op": "Number (máx 10 digits)" require,
+            "operaciones_y_elementos_a_reparar_o_sustituir": "String (máx 200 char)" required, 
+            "importe_op": "Number (máx 8 digits)" required
+        },
+        "presupuesto_operacion2":
+        {
+            "claveop": "String (máx 10 char)",
+            "numero_op": "Number (máx 10 digits)" ,
+            "operaciones_y_elementos_a_reparar_o_sustituir": "String (máx 200 char)", 
+            "importe_op": "Number (máx 8 digits)"
+        },
+        "presupuesto_operacion3":
+        {
+            "claveop": "String (máx 10 char)",
+            "numero_op": "Number (máx 10 digits)" ,
+            "operaciones_y_elementos_a_reparar_o_sustituir": "String (máx 200 char)", 
+            "importe_op": "Number (máx 8 digits)"
+        },
+        "presupuesto_operacion4":
+        {
+            "claveop": "String (máx 10 char)",
+            "numero_op": "Number (máx 10 digits)" ,
+            "operaciones_y_elementos_a_reparar_o_sustituir": "String (máx 200 char)", 
+            "importe_op": "Number (máx 8 digits)"
+        },
+        "presupuesto_general":
+        {
+            "seguro": "Number (máx 8 digits)" required,
+            "otros_materiales": "number (máx 8 digits)" required,
+            "subtotal": "number (máx 9 digits)" required,
+            "iva": "number (máx 6 digits)" required,
+            "total": "number (máx 9 digits)" required
+        }
+
+    }
+
+}

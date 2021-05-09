@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <script src="{{ url_for('static',filename='js/main.js') }}" charset="utf-8"></script>
+  <title>Inventario del auto</title>
+  <!--<script type="text/javascript">
+    $(document).ready(function(){
+
+    /*  */
+      let primeraVez = true;
+
+      $("body").click(function () {
+        let id = localStorage.getItem('id');
+        if (primeraVez) {
+          $("#localstorage-id").val(id);
+          console.log("Se intentó poner ", id, " en input");
+          primeraVez = false;
+        }
+      });
+
+    });
+  </script>-->
+  {% endblock %}
+
+{% block body %}
+  <nav class="navbar oswald">
+    Inventario interior del auto
+  </nav>
+
+  <main class="container">
+    <div style="padding-bottom: 1rem;"></div>
+    <form action="/inventariointerno" method="POST" class="row">
+      <input hidden type="text" name="localstorage-id" id="localstorage-id" value='{{ id }}'>
+    <!-- checkboxes:  -->
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="tablero" id="tablero" value="True">
+      <label class="form-check-label" for="tablero">Aditamentos del tablero</label>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="aire" id="aire" value="True">
+      <label class="form-check-label" for="aire">Calefacción</label>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="plumas" id="plumas" value="True">
+      <label class="form-check-label" for="plumas">Limpiadores o Plumas</label>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="radio" id="radio" value="True">
+      <label class="form-check-label" for="radio">Radio o equivalente</label>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="bocinas" id="bocinas" value="True">
+      <label class="form-check-label" for="bocinas">Bocinas</label>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="encendedor" id="encendedor" value="True">
+      <label class="form-check-label" for="encendedor">Encendedor</label>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="retrovisor" id="retrovisor" value="True">
+      <label class="form-check-label" for="retrovisor">Espejo retrovisor</label>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="ceniceros" id="ceniceros" value="True">
+      <label class="form-check-label" for="ceniceros">Ceniceros en buen estado</label>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="cinturones" id="cinturones" value="True">
+      <label class="form-check-label" for="cinturones">Cinturones</label>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="botones" id="botones" value="True">
+      <label class="form-check-label" for="botones">Botones interiores</label>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="manijas" id="manijas" value="True">
+      <label class="form-check-label" for="manijas">Manijas interiores</label>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="tapetes" id="tapetes" value="True">
+      <label class="form-check-label" for="tapetes">Tapetes</label>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="vestiduras" id="vestiduras" value="True">
+      <label class="form-check-label" for="vestiduras">Vestiduras</label>
+    </div>
+    <!-- checkboxes:  -->
+    <div class="alinear-btn left">
+      <button class="btn btn-secondary sm" id="select-all-btn" type="button" name="button">Marcar todo</button>
+    </div>
+    <div class="col-12">
+      <button id="submit-btn" type="submit" class="btn-siguiente"></button>
+    </div>
+    <div class="alinear-btn">
+      <span href="gasolina.html" class="oswald alinear-btn">Continuar</span>
+    </div>
+  </form>
+  <div style="padding-bottom: 2rem;"></div>
+</main>
+{% endblock %}

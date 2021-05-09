@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Poppins:wght@200&display=swap');
+
+:root {
+  font-size: 30px;
+  --iluminating: #F5DF4D;
+  --ultimategray: #939597;
+  --night: #1F1F1F;
+}
+
+/* Clases */
+.btn-intuitivo {
+  text-decoration: none;
+}
+
+.circulo {
+  height: 6rem;
+  width: 6rem;
+  color: var(--night);
+  font-size: 55px;
+  font-family: 'Oswald', sans-serif;
+  border: 3px solid var(--ultimategray);
+  border-radius: 50%;
+  background-color: var(--iluminating);
+}
+
+.icono-mas {
+  font-size: 5rem;
+  color: var(--night);
+}
+
+.centrado-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+.centrado-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.oswald {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+}
+
+.navbar {
+  background-color: var(--iluminating);
+  padding-top: 2rem;
+  padding-left: 10%;
+  border-bottom: 4px solid var(--ultimategray);
+}
+
+.form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 8px 0.12rem var(--ultimategray);
+}
+
+.sm {
+  font-size: 36px;
+}
+
+.form-check {
+  margin: 20px 0 12.5px;
+}
+
+.form-check-input:checked {
+    background-color: var(--iluminating);
+    border-color: var(--iluminating);
+}
+.form-check-input {
+  border: 2px solid var(--ultimategray);
+}
+
+.form-check-input:checked[type=checkbox] {
+    background-image: url(../imgs/palomita.png);
+}
+
+.btn-siguiente {
+  height: 170px;
+  width: 170px;
+  color: var(--night);
+  font-size: 55px;
+  font-family: 'Oswald', sans-serif;
+  border: 3px solid var(--ultimategray);
+  border-radius: 50%;
+  background-color: var(--iluminating);
+}
+
+.btn-secundarios {
+  height: 140px;
+  width: 140px;
+  color: var(--night);
+  font-size: 55px;
+  font-family: 'Oswald', sans-serif;
+  border: 3px solid var(--ultimategray);
+  border-radius: 50%;
+  background-color: var(--iluminating);
+}
+
+.alinear-btn {
+  padding: 0;
+  margin: 0 0 0 -4%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.centrar{
+  text-align: center;
+}
+
+.subtitulo {
+  padding: 0.6rem 0;
+  margin: 0;
+  font-size: 44px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  padding-top: 1rem;
+}
+
+.left {
+  justify-content: flex-start;
+}
+
+.form-check-label {
+  font-size: 42px;
+}
+
+.form-range::-webkit-slider-thumb  {
+  background: var(--iluminating);
+}
+
+
+/* Id */
+#contenedor {
+  height: 100vh;
+  text-align: center;
+  position: fixed;
+}
+
+#antes-de-circulo {
+  width: 100vw;
+}
+
+#submit-btn {
+  float: right;
+  background-image: url(../imgs/flecha.png);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 60%;/* Resize the background image to fit the container */
+}
+
+#atras-btn {
+  float: right;
+  background-image: url(../imgs/flecha_atras.png);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 60%;/* Resize the background image to fit the container */
+}
+
+#buscar-btn {
+  float: right;
+  background-image: url(../imgs/lupa3.png);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 105%;/* Resize the background image to fit the container */
+}
+
+#editar-btn {
+  float: right;
+  background-image: url(../imgs/pluma2.png);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 100%;/* Resize the background image to fit the container */
+}
+
+#valor-rango {
+  font-size: 40px;
+}
+
+#comentarios {
+  font-size: 48px;
+}
+
+#unico-boton {
+  background: none;
+  display: inline;
+}
+
+/* Etiquetas */
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  color: var(--night);
+}
+
+a:visited {
+  color: var(--night);
+}
+
+input{
+  font-size: 50px;
+  border-radius: 30px;
+}
+
+input[type=text], #direccion, input[type=number] {
+  border: 1px solid var(--ultimategray);
+}
+
+h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 60px;
+  font-weight: 500;
+}

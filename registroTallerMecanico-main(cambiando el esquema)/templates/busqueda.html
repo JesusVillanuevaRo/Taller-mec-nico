@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Buscador de clientes registrados</title>
+{% endblock %}
+
+{% block body %}
+<nav class="navbar oswald">
+  Datos del cliente
+  <a href="/busqueda/cliente">Buscar cliente</a>
+  <a href="/registrar/nuevocliente">Registrar cliente</a>
+</nav>
+<main style="margin: auto; width: 80%;">
+  <div style="padding:1rem;"></div>
+  <form action="/busqueda/cliente" method="POST" class="row g-3">
+    <input style="display: none;" type="text" name="localstorage-id" id="localstorage-id" value='{{ id }}'>
+    <div class="col-12">
+      <label for="nombre" class="form-label">Campo de busqueda<span id="asterisco-nombre" class="asterisco-rojo"></span>
+      </label>
+      <select name="tipo" required class="form-control required">
+
+        <option value="1" selected>Teléfono celular</option>
+        
+        <option value="2">Nombre</option>
+        
+        <option value="3">ID folio de servicio</option>
+        
+        </select>
+    </div>
+    <div class="col-12">
+      <label for="rol" class="form-label">Campo seleccionado<span id="asterisco-rol" class="asterisco-rojo"></span></label>
+      <input type="text" required name="campo" class="form-control required" id="telefono" placeholder="ID, Nombre o Tel-Celular">
+    </div><br><br><br><br><br>
+    <div class="col-12">
+        <button id="buscar-btn" type="submit" class="btn-siguiente"></button>
+    </div>
+    <div class="alinear-btn">
+        <span class="oswald alinear-btn">Buscar</span>
+    </div>
+  </form>
+  <!--<script src="{{ url_for('static', filename='js/setlocalstorage.js') }}" charset="utf-8"></script>-->
+  <script src= "{{ alerta }}?1.3" ></script>
+{% endblock %}
+

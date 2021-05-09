@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Datos del cliente</title>
+{% endblock %}
+
+{% block body %}
+<nav class="navbar oswald">
+  Cliente encontrado
+<a href="/busqueda/cliente">Buscar cliente</a>
+<a href="/registrar/nuevocliente">Registrar cliente</a>
+</nav>
+<main style="margin: auto; width: 80%;">
+  <div style="padding:1rem;"></div>
+  {% for n in mostrador %}
+  <form action="/edicion" method="GET" class="row g-3">
+    <input style="display: none;" type="text" name="localstorage-id" id="localstorage-id" value='{{ id }}'>
+    <div class="col-12">
+      <label for="nombre" class="form-label">Nombre<span id="asterisco-nombre" class="asterisco-rojo"></span>
+      </label>
+      <input type="text" disabled class="form-control required" id="nombre" value="{{n['nombre']}}">
+      <input type="text" {{habilitador}}  required name="nombre" class="form-control required" id="nombre" value="{{n['nombre']}}">
+    </div>
+    <div class="col-12">
+      <label for="rol" class="form-label">Teléfono<span id="asterisco-rol" class="asterisco-rojo"></span></label>
+      <input type="text" disabled class="form-control required" id="nombre" value="{{n['telefono']}}">
+      <input type="number" {{ habilitador }} required name="telefono" class="form-control required" id="telefono" value="{{n['telefono']}}">
+    </div>
+    <div class="col-12">
+      <label for="link-foto" class="form-label">Dirección</label>
+      <input type="text" disabled class="form-control required" id="nombre" value="{{n['direccion']}}">
+      <input type="text" rows="3" {{ habilitador }} name="direccion" class="form-control" id="direccion" value="{{n['direccion']}}"></input>
+    </div>
+    <div>
+      <div class="col-12">
+        <a href="/{{n['_id']}}/nuevoservicio" id="submit-btn" type="submit" class="btn-siguiente"></a>
+      </div>
+      <div class="col-8">
+          <button id="editar-btn" class="btn-siguiente" type="submit"></button>
+      </div>
+      <div class="col-4">
+        <a id="buscar-btn" href="/{{ n['_id'] }}/historial" class="btn-siguiente"></a>
+    </div>
+    </div>
+    <div>
+        <span class="oswald alinear-btn"><span class="oswald col-4">Buscar <br> Servicios</span><span class="oswald col-3">Editar</span>Agregar servicio</span>
+    </div>
+  </form>
+  {% endfor %}
+  <!--<script src="{{ url_for('static', filename='js/setlocalstorage.js') }}" charset="utf-8"></script>-->
+{% endblock %}

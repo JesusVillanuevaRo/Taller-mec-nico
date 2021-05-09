@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Datos cliente</title>
+{% endblock %}
+
+{% block body %}
+<nav class="navbar oswald">
+  Datos del cliente
+<a href="/busqueda/cliente">Buscar cliente</a>
+<a href="/registrar/nuevocliente">Registrar cliente</a>
+</nav>
+
+<main style="margin: auto; width: 80%;">
+  <div style="padding:1rem;"></div>
+  <form action="/datoscliente" method="POST" class="row g-3">
+    <input style="display: none;" type="text" name="localstorage-id" id="localstorage-id" value='{{ id }}'>
+    <div class="col-12">
+      <label for="nombre" class="form-label">Nombre<span id="asterisco-nombre" class="asterisco-rojo"></span>
+      </label>
+      <input type="text" required name="nombre" class="form-control required" id="nombre" placeholder="Fulanito...">
+    </div>
+    <div class="col-12">
+      <label for="rol" class="form-label">Teléfono<span id="asterisco-rol" class="asterisco-rojo"></span></label>
+      <input type="number" required name="telefono" class="form-control required" id="telefono" placeholder="55 1234...">
+    </div>
+    <div class="col-12">
+      <label for="link-foto" class="form-label">Dirección</label>
+      <textarea rows="3" name="direccion" class="form-control" id="direccion" placeholder="Av. Hector..."></textarea>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" name="whats" id="whats" value="True">
+      <label class="form-check-label sm" for="whats">Teléfono tiene WhatsApp</label>
+    </div>
+    <div class="col-12">
+      <button id="submit-btn" type="submit" class="btn-siguiente"></button>
+    </div>
+    <div class="alinear-btn">
+      <span class="oswald alinear-btn">Continuar</span>
+    </div>
+  </form>
+  <script src="{{ url_for('static', filename='js/setlocalstorage.js') }}" charset="utf-8"></script>
+{% endblock %}

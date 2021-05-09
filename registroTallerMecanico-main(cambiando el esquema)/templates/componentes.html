@@ -1,0 +1,58 @@
+{% extends 'base2.html' %}
+
+{% block head %}
+<title>Componentes mecánicos</title>
+{% endblock %}
+
+{% block body %}
+<nav class="navbar oswald">
+  Inventario de componentes mecánicos
+</nav>
+<div style="padding:1rem;"></div>
+<main class="container">
+  <!-- checkboxes:  -->
+  <form action="/componentes" method="POST" class="row g-3">
+    <input hidden type="text" name="localstorage-id" id="localstorage-id" value='{{ id }}'>
+    <div class="mb-1 form-check">
+      <input type="checkbox" class="form-check-input" name="claxon" id="claxon" value="True">
+      <label class="form-check-label" for="claxon">Claxon funciona</label>
+    </div>
+    <div class="mb-1 form-check">
+      <input type="checkbox" class="form-check-input" name="tapon-aceite" id="tapon-aceite" value="True">
+      <label class="form-check-label" for="tapon-aceite">Tapón de aceite</label>
+    </div>
+    <div class="mb-1 form-check">
+      <input type="checkbox" class="form-check-input" name="tapon-radiador" id="tapon-radiador" value="True">
+      <label class="form-check-label" for="tapon-radiador">Tapón de radiador</label>
+    </div>
+    <div class="mb-1 form-check">
+      <input type="checkbox" class="form-check-input" name="varilla-aceite" id="varilla-aceite" value="True">
+      <label class="form-check-label" for="varilla-aceite">Varilla de aceite</label>
+    </div>
+    <div class="mb-1 form-check">
+      <input type="checkbox" class="form-check-input" name="filtro" id="filtro" value="True">
+      <label class="form-check-label" for="filtro">Filtro de aire</label>
+    </div>
+    <div class="mb-1 form-check">
+      <input type="checkbox" class="form-check-input" name="bateria" id="bateria" value="True">
+      <label class="form-check-label" for="bateria">Batería</label>
+    </div>
+    <!-- checkboxes:  -->
+    <div style="padding-bottom: 0.5rem;"></div>
+    <div class="alinear-btn left">
+      <button class="btn btn-secondary sm" id="select-all-btn" type="button" name="button">Marcar todo</button>
+    </div>
+    <div class="col-12">
+      <label for="comentarios" class="form-label subtitulo">Observaciones y comentarios</label>
+      <textarea rows="3" name="comentarios" class="form-control" id="comentarios" placeholder="El auto no arranca..."></textarea>
+    </div>
+    <div class="col-12">
+      <button id="submit-btn" type="submit" class="btn-siguiente"></button>
+    </div>
+    <div class="alinear-btn">
+      <span href="/" class="oswald alinear-btn">Finalizar</span>
+    </div>
+  </form>
+  <div style="padding-bottom: 2rem;"></div>
+</main>
+{% endblock %}

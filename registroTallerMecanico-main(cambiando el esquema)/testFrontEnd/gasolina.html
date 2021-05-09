@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/tanque.js" defer charset="utf-8"></script>
+  <script src="js/main.js" defer charset="utf-8"></script>
+  <title>Gasolina y Accesorios</title>
+</head>
+
+<body>
+  <nav class="navbar oswald">
+    Inventario de accesorios y gasolina
+  </nav>
+
+  <main class="container">
+    <div style="padding:1rem;"></div>
+    <form action="/datosauto.html" method="POST" class="row g-3">
+      <label for="gasolina" class="form-label subtitulo">Gasolina en tanque</label>
+      <input type="range" class="form-range" min="0" max="100" step="12.5" id="gasolina">
+      <span id="valor-rango">Medio tanque</span>
+      <!-- checkboxes:  -->
+      <h3 class="subtitulo">Accesorios de emergencia</h3>
+      <div class="mb-1 form-check">
+        <input type="checkbox" class="form-check-input" name="gato" id="gato">
+        <label class="form-check-label" for="gato">Gato</label>
+      </div>
+      <div class="mb-1 form-check">
+        <input type="checkbox" class="form-check-input" name="maneral" id="maneral">
+        <label class="form-check-label" for="maneral">Maneral del gato</label>
+      </div>
+      <div class="mb-1 form-check">
+        <input type="checkbox" class="form-check-input" name="llave-ruedas" id="llave-ruedas">
+        <label class="form-check-label" for="llave-ruedas">Llave de ruedas</label>
+      </div>
+      <div class="mb-1 form-check">
+        <input type="checkbox" class="form-check-input" name="estuche" id="estuche">
+        <label class="form-check-label" for="estuche">Estuche de herramientas</label>
+      </div>
+      <div class="mb-1 form-check">
+        <input type="checkbox" class="form-check-input" name="triangulos" id="triangulos">
+        <label class="form-check-label" for="triangulos">Triángulo de seguridad</label>
+      </div>
+      <div class="mb-1 form-check">
+        <input type="checkbox" class="form-check-input" name="refaccion" id="refaccion">
+        <label class="form-check-label" for="refaccion">Llanta de refacción</label>
+      </div>
+      <div class="mb-1 form-check">
+        <input type="checkbox" class="form-check-input" name="extintor" id="extintor">
+        <label class="form-check-label" for="extintor">Extintor</label>
+      </div>
+      <!-- checkboxes:  -->
+      <div style="padding-bottom: 0.5rem;"></div>
+      <div class="alinear-btn left">
+        <button class="btn btn-secondary sm" id="select-all-btn" type="button" name="button">Marcar todo</button>
+      </div>
+      <div class="col-12">
+        <button id="submit-btn" type="submit" class="btn-siguiente"></button>
+      </div>
+      <div class="alinear-btn">
+        <a href="componentes.html" class="oswald alinear-btn">Continuar</a>
+      </div>
+    </form>
+    <div style="padding-bottom: 2rem;"></div>
+  </main>
+</body>
+
+</html>

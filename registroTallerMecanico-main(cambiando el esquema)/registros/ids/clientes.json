@@ -1,0 +1,9 @@
+{
+    "nombre" : "String (máx 50 char)" required, 
+    "direccion" : "String (máx 100 char)" required,
+    "ciudad" : "String (máx 30 char)" required,
+    "codigopostal" : "Number (5 digits)" required,
+    "correo_e" : "String (máx 40 char)" required,
+    "telefono" : "Number (10 digits)" required,
+    "rfc" : "String (12-13 char)"
+}

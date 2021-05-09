@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/main.js" defer charset="utf-8"></script>
+  <title>Inventario del auto</title>
+</head>
+
+<body>
+  <nav class="navbar oswald">
+    Inventario interior del auto
+  </nav>
+
+  <main class="container">
+    <div style="padding-bottom: 1rem;"></div>
+    <form action="/api/members" method="POST" class="row">
+      <!-- checkboxes:  -->
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" name="tablero" id="tablero">
+        <label class="form-check-label" for="tablero">Aditamentos del tablero</label>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" name="aire" id="aire">
+        <label class="form-check-label" for="aire">Calefacción</label>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" name="plumas" id="plumas">
+        <label class="form-check-label" for="plumas">Limpiadores o Plumas</label>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" name="radio" id="radio">
+        <label class="form-check-label" for="radio">Radio o equivalente</label>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" name="bocinas" id="bocinas">
+        <label class="form-check-label" for="bocinas">Bocinas</label>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" name="encendedor" id="encendedor">
+        <label class="form-check-label" for="encendedor">Encendedor</label>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" name="retrovisor" id="retrovisor">
+        <label class="form-check-label" for="retrovisor">Espejo retrovisor</label>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" name="ceniceros" id="ceniceros">
+        <label class="form-check-label" for="ceniceros">Ceniceros en buen estado</label>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" name="cinturones" id="cinturones">
+        <label class="form-check-label" for="cinturones">Cinturones</label>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" name="botones" id="botones">
+        <label class="form-check-label" for="botones">Botones interiores</label>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" name="manijas" id="manijas">
+        <label class="form-check-label" for="manijas">Manijas interiores</label>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" name="tapetes" id="tapetes">
+        <label class="form-check-label" for="tapetes">Tapetes</label>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" name="vestiduras" id="vestiduras">
+        <label class="form-check-label" for="vestiduras">Vestiduras</label>
+      </div>
+      <!-- checkboxes:  -->
+      <div class="alinear-btn left">
+        <button class="btn btn-secondary sm" id="select-all-btn" type="button" name="button">Marcar todo</button>
+      </div>
+      <div class="col-12">
+        <button id="submit-btn" type="submit" class="btn-siguiente"></button>
+      </div>
+      <div class="alinear-btn">
+        <a href="gasolina.html" class="oswald alinear-btn">Continuar</a>
+      </div>
+    </form>
+    <div style="padding-bottom: 2rem;"></div>
+  </main>
+</body>
+
+</html>

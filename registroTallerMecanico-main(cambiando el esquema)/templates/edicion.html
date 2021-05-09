@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Datos del cliente</title>
+{% endblock %}
+
+{% block body %}
+<nav class="navbar oswald">
+  Datos del cliente
+</nav>
+<main style="margin: auto; width: 80%;">
+  <div style="padding:1rem;"></div>
+  <form action="/edicion" method="POST" class="row g-3">
+    {% for n in mostrador %}
+    <input hidden type="text" name="_id" value="{{n['_id']}}">
+    {% endfor %}
+    <div class="col-12">
+      <label for="nombre" class="form-label">Nombre<span id="asterisco-nombre" class="asterisco-rojo"></span>
+      </label>
+      <input type="text" required name="nombre" class="form-control required" id="nombre" value='{{nombre}}'>
+    </div>
+    <div class="col-12">
+      <label for="rol" class="form-label">Teléfono<span id="asterisco-rol" class="asterisco-rojo"></span></label>
+      <input type="number" required name="telefono" class="form-control required" id="telefono" value='{{telefono}}'>
+    </div>
+    <div class="col-12">
+      <label for="link-foto" class="form-label">Dirección</label>
+      <input type="text" rows="3" name="direccion" class="form-control" id="direccion" value='{{direccion}}'>
+    </div>
+    
+
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" name="whats" id="whats" value="True">
+            <label class="form-check-label sm" for="whats">Teléfono tiene WhatsApp</label>
+        </div>
+
+    
+      <div class="col-12">
+        <button id="submit-btn" type="submit" class="btn-siguiente"></button>
+      </div>
+    </div>
+    <div>
+        <span class="oswald alinear-btn">Guardar</span>
+    </div>
+  </form>
+  <!--<script src="{{ url_for('static', filename='js/setlocalstorage.js') }}" charset="utf-8"></script>-->
+{% endblock %}

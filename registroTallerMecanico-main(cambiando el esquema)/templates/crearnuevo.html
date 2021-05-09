@@ -1,0 +1,26 @@
+{% extends 'base3.html' %}
+
+{% block head %}
+<title>Registrar nuevo</title>
+{% endblock %}
+
+{% block body %}
+<nav class="navbar oswald">
+  <a href="/busqueda/cliente">Buscar cliente</a>
+  <a href="/registrar/nuevocliente">Registrar cliente</a>
+</nav>
+<main id="contenedor" class="centrado-vertical">
+  <form action="/" method="post">
+    <div id="antes-de-circulo" class="centrado-horizontal">
+      <a class="btn-intuitivo">
+        <div class="circulo centrado-vertical icono-mas oswald" onclick="javascript:document.forms[0].submit()">
+          +
+        </div>
+      </a>
+    </div>
+  </form>
+  <br>
+  <h2>Registrar nuevo auto</h2>
+</main>
+
+{% endblock %}

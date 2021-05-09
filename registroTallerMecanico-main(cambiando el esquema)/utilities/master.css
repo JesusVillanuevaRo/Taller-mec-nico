@@ -1,0 +1,104 @@
+
+#contenedor {
+  width: 100%;
+  margin: auto;
+}
+
+#condiciones-rechazo {
+  font-size: 0.9rem;
+}
+
+#pagare {
+  font-size: 0.9rem;
+  margin-top: 0.6rem;
+}
+
+#firmas {
+  font-size: 0.9rem;
+  margin-top: 2.6rem;
+  padding: 0 1rem;
+  border-top: 1px solid #000;
+}
+
+#caja-servicios {
+  padding: 3rem;
+}
+
+h1,
+h2,h4 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+}
+
+article {
+  margin: 1rem auto;
+}
+
+div {
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+section {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.encabezado-2 {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.encabezado-1 {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 500;
+  padding-top: 1rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0;
+}
+
+.encabezado-0 {
+  border-bottom: 1px solid #000;
+  margin-bottom: 0.5rem;
+}
+
+.folio {
+  border: 1px solid #000;
+  font-size:0.8rem;
+  text-align: center;
+  position: absolute;
+  top: 1rem;
+  right: 5%;
+  padding: 0.2rem;
+}
+
+.logo {
+  position: absolute;
+  top: 1rem;
+  left:6%;
+}
+
+.caja {
+  padding: 0.2rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.cajero {
+  border: 1px solid #000;
+}
+
+.pestaña {
+  padding: 0.2rem;
+  background-color: #bababd;
+  width: 30%;
+  color: #151514;
+  border-top-right-radius: 25px 50px;
+}

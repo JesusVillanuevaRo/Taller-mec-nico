@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Datos auto</title>
+<!--<script type="text/javascript">
+  $(document).ready(function(){
+
+  /*  */
+    let primeraVez = true;
+
+    $("h3").fadeOut();
+    $("body").click(function () {
+      let id = localStorage.getItem('id');
+      if (primeraVez) $("#localstorage-id").val(id);
+      console.log("Se intentó poner ", id, " en input");
+      primeraVez = false;
+    });
+
+  });
+</script>-->
+{% endblock %}
+
+{% block body %}
+<nav class="navbar oswald">
+  Datos generales del auto
+</nav>
+<main style="margin: auto; width: 80%;">
+  <div style="padding:1rem;"></div>
+  <form action="/datosauto" method="POST" class="row g-3">
+    <input hidden  type="text" name="localstorage-id" id="localstorage-id" value='{{ id }}'>
+    <div class="col-6">
+      <label for="tipo" class="form-label">Tipo<span id="asterisco-tipo" class="asterisco-rojo"></span>
+      </label>
+      <input type="text" required name="tipo" class="form-control required" id="tipo" placeholder="Versa">
+    </div>
+    <div class="col-6">
+      <label for="link-foto" class="form-label">Marca</label>
+      <input type="text" name="marca" class="form-control" id="marca" placeholder="Nissan">
+    </div>
+    <div class="col-6">
+      <label for="modelo" class="form-label">Modelo<span id="asterisco-modelo" class="asterisco-rojo"></span></label>
+      <input type="number" required name="modelo" class="form-control required" id="modelo" placeholder="2020">
+    </div>
+    <div class="col-6">
+      <label for="placas" class="form-label">Placas<span id="asterisco-modelo" class="asterisco-rojo"></span></label>
+      <input type="text" required name="placas" class="form-control required" id="placas" placeholder="AUX-19">
+    </div>
+    <div class="col-7">
+      <label for="kilometraje" class="form-label">Kilometraje<span id="km" class="asterisco-rojo"></span></label>
+    <div class="input-group mb-3">
+      <input type="number" id="kilometraje" name="kilometraje" class="form-control" placeholder="100,000" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <span class="input-group-text" id="basic-addon2">km</span>
+    </div>
+    </div>
+    <div class="col-12">
+      <button id="submit-btn" type="submit" class="btn-siguiente"></button>
+    </div>
+    <div class="alinear-btn">
+      <span class="oswald alinear-btn">Continuar</span>
+    </div>
+  </form>
+{% endblock %}
